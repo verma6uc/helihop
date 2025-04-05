@@ -4,20 +4,13 @@ import MainLayout from './layouts/MainLayout';
 import MembershipOptions from './pages/MembershipOptions/MembershipOptions';
 import HowItWorks from './pages/HowItWorks/HowItWorks';
 import BookNow from './pages/BookNow/BookNow';
-
-// Placeholder components for routes - these will be replaced with actual page components
-const HomePage = () => (
-  <div className="container mx-auto py-12">
-    <h1 className="mb-8 text-4xl font-bold text-helihop-dark md:text-5xl">Welcome to HeliHop</h1>
-    <p className="text-lg text-helihop-medium">Intelligent helicopter routing at your service.</p>
-  </div>
-);
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<HomePage />} />
+        <Route index element={<Homepage />} />
         <Route path="book-now" element={<BookNow />} />
         <Route path="how-it-works" element={<HowItWorks />} />
         <Route path="membership-options" element={<MembershipOptions />} />
@@ -28,4 +21,3 @@ function App() {
 }
 
 export default App;
-  
