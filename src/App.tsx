@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import MembershipOptions from './pages/MembershipOptions/MembershipOptions';
+import HowItWorks from './pages/HowItWorks/HowItWorks';
 
 // Placeholder components for routes - these will be replaced with actual page components
 const HomePage = () => (
@@ -15,13 +16,6 @@ const BookNow = () => (
   <div className="container mx-auto py-12">
     <h1 className="mb-8 text-4xl font-bold text-helihop-dark">Book Now</h1>
     <p className="text-lg text-helihop-medium">Book your next helicopter journey.</p>
-  </div>
-);
-
-const HowItWorks = () => (
-  <div className="container mx-auto py-12">
-    <h1 className="mb-8 text-4xl font-bold text-helihop-dark">How It Works</h1>
-    <p className="text-lg text-helihop-medium">Learn about our intelligent routing system.</p>
   </div>
 );
 
@@ -40,4 +34,3 @@ function App() {
 }
 
 export default App;
-  
