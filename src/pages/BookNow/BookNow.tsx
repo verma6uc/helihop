@@ -1,53 +1,28 @@
 
-import React from 'react';
-import HeroBanner from '@/pages/BookNow/sections/HeroBanner';
-import IntelligentRoutingShowcase from '@/pages/BookNow/sections/IntelligentRoutingShowcase';
-import TimeValueCalculator from '@/pages/BookNow/sections/TimeValueCalculator';
-import LuxuryExperiencePreview from '@/pages/BookNow/sections/LuxuryExperiencePreview';
-import CallToActionBookingPreview from '@/pages/BookNow/sections/CallToActionBookingPreview';
+import React, { lazy, Suspense } from 'react';
+import CallToActionBookingPreview from './sections/CallToActionBookingPreview';
+
+// Lazy-loaded components would go here
+// const SomeOtherSection = lazy(() => import('./sections/SomeOtherSection'));
 
 /**
- * BookNow page component that assembles all sections for the helicopter booking experience
- * Presents the complete user journey from initial engagement to final booking action
+ * BookNow page - Handles the booking process for the service
  */
 const BookNow: React.FC = () => {
   return (
-    <div className="bg-helihop-white">
-      {/* Hero Banner Section */}
-      <section className="w-full">
-        <HeroBanner />
-      </section>
-
-      {/* Intelligent Routing Showcase */}
-      <section className="w-full py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <IntelligentRoutingShowcase />
-        </div>
-      </section>
-
-      {/* Time-Value Calculator */}
-      <section className="w-full bg-helihop-lightest py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <TimeValueCalculator />
-        </div>
-      </section>
-
-      {/* Luxury Experience Preview */}
-      <section className="w-full py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <LuxuryExperiencePreview />
-        </div>
-      </section>
-
-      {/* Call-to-Action & Booking Preview */}
-      <section className="w-full bg-helihop-lightest py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <CallToActionBookingPreview />
-        </div>
-      </section>
-    </div>
+    <main className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl md:text-5xl font-bold pt-12 pb-8 text-center font-montserrat">
+          Book Your Luxury Journey
+        </h1>
+        
+        {/* Other page sections would go here */}
+        
+        {/* Final CTA and Booking section */}
+        <CallToActionBookingPreview />
+      </div>
+    </main>
   );
 };
 
 export default BookNow;
-  
