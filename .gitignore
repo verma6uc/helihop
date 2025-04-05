@@ -10,14 +10,23 @@ lerna-debug.log*
 
 # Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+/coverage
+*.lcov
+
+# Production build
 dist
 dist-ssr
 *.local
+build
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-!.vscode/settings.json
 .idea
 .DS_Store
 *.suo
@@ -33,15 +42,11 @@ dist-ssr
 .env.test.local
 .env.production.local
 
-# Build files
-/build
-/out
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# Cache
+# Misc
 .cache
-.eslintcache
-.stylelintcache
-.parcel-cache
-
-# Coverage directory
-coverage
+.vercel
+.output

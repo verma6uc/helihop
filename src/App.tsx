@@ -1,48 +1,47 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import MainLayout from '@/layouts/MainLayout';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
 
+// Placeholder components for routes - these will be replaced with actual page components
 const HomePage = () => (
-  <div className="container mx-auto py-16">
-    <h1 className="text-4xl font-montserrat font-bold text-helihop-dark">
-      Welcome to <span className="text-helihop-blue">HeliHop</span>
-    </h1>
-    <p className="mt-4 text-helihop-medium text-lg font-lato">
-      Experience luxury helicopter travel with AI-optimized routes for maximum time savings.
-    </p>
+  <div className="container mx-auto py-12">
+    <h1 className="mb-8 text-4xl font-bold text-helihop-dark md:text-5xl">Welcome to HeliHop</h1>
+    <p className="text-lg text-helihop-medium">Intelligent helicopter routing at your service.</p>
   </div>
 );
 
-const BookNowPage = () => (
-  <div className="container mx-auto py-16">
-    <h1 className="text-4xl font-montserrat font-bold text-helihop-dark">Book Now</h1>
+const BookNow = () => (
+  <div className="container mx-auto py-12">
+    <h1 className="mb-8 text-4xl font-bold text-helihop-dark">Book Now</h1>
+    <p className="text-lg text-helihop-medium">Book your next helicopter journey.</p>
   </div>
 );
 
-const HowItWorksPage = () => (
-  <div className="container mx-auto py-16">
-    <h1 className="text-4xl font-montserrat font-bold text-helihop-dark">How It Works</h1>
+const HowItWorks = () => (
+  <div className="container mx-auto py-12">
+    <h1 className="mb-8 text-4xl font-bold text-helihop-dark">How It Works</h1>
+    <p className="text-lg text-helihop-medium">Learn about our intelligent routing system.</p>
   </div>
 );
 
-const MembershipOptionsPage = () => (
-  <div className="container mx-auto py-16">
-    <h1 className="text-4xl font-montserrat font-bold text-helihop-dark">Membership Options</h1>
+const MembershipOptions = () => (
+  <div className="container mx-auto py-12">
+    <h1 className="mb-8 text-4xl font-bold text-helihop-dark">Membership Options</h1>
+    <p className="text-lg text-helihop-medium">Explore our premium membership plans.</p>
   </div>
 );
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="book-now" element={<BookNowPage />} />
-          <Route path="how-it-works" element={<HowItWorksPage />} />
-          <Route path="membership" element={<MembershipOptionsPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="book-now" element={<BookNow />} />
+        <Route path="how-it-works" element={<HowItWorks />} />
+        <Route path="membership" element={<MembershipOptions />} />
+        <Route path="*" element={<div>Page not found</div>} />
+      </Route>
+    </Routes>
   );
 }
 

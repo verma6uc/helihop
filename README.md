@@ -1,6 +1,6 @@
 
 # HeliHop
 
-HeliHop is an innovative platform that offers on-demand helicopter travel with AI-powered intelligent routing. Think "Uber for helicopters" but with sophisticated optimization algorithms that maximize time savings for busy professionals.
+HeliHop: An Uber for helicopters using intelligent routing.
 
-This project uses React, TypeScript, Vite, Tailwind CSS, and Shadcn UI for a responsive and sleek user interface.
+A modern React application built with TypeScript, Tailwind CSS, Vite, and Shadcn UI components.

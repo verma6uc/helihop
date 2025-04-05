@@ -7,7 +7,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    './index.html'
+    './index.html',
   ],
   theme: {
     container: {
@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        // Brand colors
+        // Primary brand colors
         "helihop-blue": "#0077B6",
         "helihop-gold": "#FFDD00",
         "helihop-orange": "#FF5733",
@@ -29,7 +29,7 @@ module.exports = {
         "helihop-light": "#DDDDDD",
         "helihop-white": "#FFFFFF",
         "helihop-offwhite": "#F8F9FA",
-        // Shadcn system colors
+        // Shadcn UI colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -65,8 +65,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        lato: ['Lato', 'sans-serif'],
+        montserrat: ["Montserrat", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,7 +86,7 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "pulse-light": {
+        "pulse-subtle": {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.8 },
         },
@@ -95,16 +95,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
-        "pulse-light": "pulse-light 4s ease-in-out infinite",
+        "pulse-subtle": "pulse-subtle 3s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'grid-pattern': 'linear-gradient(to right, rgba(0, 119, 182, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 119, 182, 0.1) 1px, transparent 1px)',
-        'hero-pattern': 'linear-gradient(to right bottom, rgba(0, 119, 182, 0.05), rgba(255, 255, 255, 0.1))',
-      },
-      boxShadow: {
-        'card-hover': '0 10px 25px -5px rgba(0, 119, 182, 0.1), 0 8px 10px -6px rgba(0, 119, 182, 0.05)',
+        'hero-pattern': "url('/src/assets/hero-bg.svg')",
       },
     },
   },
