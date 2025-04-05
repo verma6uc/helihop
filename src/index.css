@@ -1,0 +1,156 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shadcn UI Variables */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 196 100% 36%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 16 79% 60%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 196 100% 36%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 196 100% 36%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 16 79% 60%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 196 100% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-lato;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-semibold tracking-tight;
+  }
+  /* Custom Gradients */
+  .bg-gradient-hero {
+    @apply bg-gradient-to-br from-helihop-blue/10 to-transparent;
+  }
+  .bg-gradient-card {
+    @apply bg-gradient-to-tr from-white to-helihop-offwhite;
+  }
+  .bg-gradient-button {
+    @apply bg-gradient-to-r from-helihop-blue to-helihop-blue/90;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-gradient-button px-4 py-2 text-sm font-medium text-white shadow transition-all duration-300 hover:opacity-90 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-helihop-blue focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-helihop-blue border border-helihop-blue/20 shadow-sm transition-all duration-300 hover:bg-helihop-offwhite hover:border-helihop-blue/30 focus:outline-none focus:ring-2 focus:ring-helihop-blue focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply rounded-lg border border-helihop-light bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-card-hover;
+  }
+  
+  .input {
+    @apply rounded-md border border-helihop-light bg-white px-3 py-2 text-helihop-dark shadow-sm transition-colors duration-200 placeholder:text-helihop-medium focus:border-helihop-blue focus:outline-none focus:ring-1 focus:ring-helihop-blue;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-light {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Apply animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-light {
+  animation: pulse-light 4s ease-in-out infinite;
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0077B6;
+}
