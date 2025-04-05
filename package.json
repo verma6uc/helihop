@@ -1,4 +1,3 @@
-
 {
   "name": "helihop",
   "private": true,
@@ -25,7 +24,7 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.292.0",
     "react": "^18.2.0",
-    "react-credit-cards": "^0.8.3",
+    "react-credit-cards-2": "^1.0.1",
     "react-datepicker": "^4.21.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.48.2",

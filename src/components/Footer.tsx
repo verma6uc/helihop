@@ -42,8 +42,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/membership" className="text-helihop-medium hover:text-helihop-blue">
-                  Membership
+                <Link to="/membership-options" className="text-helihop-medium hover:text-helihop-blue">
+                  Membership Options
                 </Link>
               </li>
             </ul>
@@ -98,3 +98,4 @@ const Footer = () => {
 };
 
 export default Footer;
+  

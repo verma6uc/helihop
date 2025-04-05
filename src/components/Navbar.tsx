@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Book Now', path: '/book-now' },
     { name: 'How It Works', path: '/how-it-works' },
-    { name: 'Membership', path: '/membership' },
+    { name: 'Membership Options', path: '/membership-options' },
   ];
 
   return (
@@ -91,3 +91,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+  

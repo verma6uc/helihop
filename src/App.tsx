@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
+import MembershipOptions from './pages/MembershipOptions/MembershipOptions';
 
 // Placeholder components for routes - these will be replaced with actual page components
 const HomePage = () => (
@@ -24,13 +25,6 @@ const HowItWorks = () => (
   </div>
 );
 
-const MembershipOptions = () => (
-  <div className="container mx-auto py-12">
-    <h1 className="mb-8 text-4xl font-bold text-helihop-dark">Membership Options</h1>
-    <p className="text-lg text-helihop-medium">Explore our premium membership plans.</p>
-  </div>
-);
-
 function App() {
   return (
     <Routes>
@@ -38,7 +32,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="book-now" element={<BookNow />} />
         <Route path="how-it-works" element={<HowItWorks />} />
-        <Route path="membership" element={<MembershipOptions />} />
+        <Route path="membership-options" element={<MembershipOptions />} />
         <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>
@@ -46,3 +40,4 @@ function App() {
 }
 
 export default App;
+  
